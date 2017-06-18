@@ -43,9 +43,6 @@ object MainObject {
     // Register the DataFrames as a table.
     bikeDataFrame.registerTempTable("divya_bikes")
 
-    /**
-     * SQL statements can be run by using the sql methods provided by sqlContext.
-     */
     val results = sqlContext.sql("SELECT * FROM divya_bikes")
     results.limit(10).show()
 
